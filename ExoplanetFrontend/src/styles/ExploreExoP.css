@@ -1,0 +1,75 @@
+/* ExploreExoP.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 60%; /* Adjust the width as needed */
+  }
+  
+  button {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .results-container {
+    margin-top: 20px;
+  }
+  
+  .results-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+
+  
+  .planet-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    gap: 20px; /* Adds space between the image and the info */
+  }
+  
+  .random-button {
+    margin-bottom: 20px;
+  }
+  
+  .planet-image {
+    border: '1px solid #ccc';
+    flex-shrink: 0; /* Prevents the canvas from shrinking */
+  }
+
+  .planet-info {
+    flex-grow: 1; /* Allows the info section to take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .planet-info p {
+    margin: 5px 0;
+    line-height: 1.4; /* Improves readability */
+  }
+
+  canvas {
+    background-color: #f0f0f0; /* A light background color for the canvas */
+    border: 1px solid #ccc;
+  }

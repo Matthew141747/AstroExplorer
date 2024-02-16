@@ -52,6 +52,16 @@ const Navigate = () => {
             Home
           </Link>
         </li>
+        <li>
+          <Link to="/SolarSystem" className="navigate-link">
+            Solar System
+          </Link>
+        </li>
+        <li>
+          <Link to="/Exoplanets" className="navigate-link">
+            Exoplanets
+          </Link>
+        </li>
         {isLoggedIn ? (
           <>
             <li>
