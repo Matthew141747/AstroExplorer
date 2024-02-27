@@ -4,27 +4,46 @@ import TimeControl from './TimeControl';
 import '../../styles/SolarSystem/SolarSystem.css';
 import MercuryOrbit from './Mercury';
 import VenusOrbit from './Venus';
+import MarsOrbit from './Mars';
+import JupiterOrbit from './Jupiter';
+import SaturnOrbit from './Saturn';
+import UranusOrbit from './Uranus';
+import NeptuneOrbit from './Neptune';
+import { scaleFactors } from './ScaleFactors';
+
+
+
 
 const SolarSystem = () => {
+
     const [selectedDate, setSelectedDate] = useState(new Date());
+    const viewBoxSize = 2 * scaleFactors.neptune * 30.07;
+    //const viewBoxSize = 2 * scaleFactors.jupiter * 5.204; 
+   // const viewBoxSize = 2 * scaleFactors.mars * 1.524;
+    const viewBox = `-${viewBoxSize / 2} -${viewBoxSize / 2} ${viewBoxSize} ${viewBoxSize}`;
 
     const handleDateChange = (date) => {
         setSelectedDate(date);
     };
 
+   
     return (
-        <div className="solar-system">
+        <div>
             <TimeControl onDateChange={handleDateChange} />
-            <svg width="100%" height="800" style={{ backgroundColor: 'black', position: 'relative' }}>
+            <svg width="100%" height="100%" viewBox={viewBox} >
                 <circle className="sun" cx="50%" cy="50%" r="10" />
-                
-                <g transform="translate(50%, 50%)">
-                    <MercuryOrbit period={88} semiMajorAxis={0.387} eccentricity={0.206} date={selectedDate} />
-                    <VenusOrbit period={224.7} semiMajorAxis={0.723} eccentricity={0.0067} date={selectedDate} />
-                    <EarthOrbit period={365.25} semiMajorAxis={100} eccentricity={0.0167} date={selectedDate} />
-                </g>
+                <MercuryOrbit date={selectedDate} />
+                <VenusOrbit date={selectedDate} />
+                <EarthOrbit date={selectedDate} />
+                <MarsOrbit date={selectedDate}/>
+                <JupiterOrbit date = {selectedDate}/>
+                <SaturnOrbit date = {selectedDate}/>
+                <UranusOrbit date = {selectedDate}/>
+                <NeptuneOrbit date = {selectedDate}/>
+              
             </svg>
         </div>
     );
 };
+
 export default SolarSystem;

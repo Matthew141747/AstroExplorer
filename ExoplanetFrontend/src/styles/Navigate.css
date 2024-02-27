@@ -17,13 +17,13 @@
   
   .navigate-link {
     text-decoration: none;
-    color: #ecf0f1; /* Light text color for links */
+    color: #ecf0f1; 
     font-size: 16px;
     font-weight: bold;
   }
   
   .navigate-link:hover {
-    color: #3498db; /* Accent color on hover */
+    color: #3498db; 
   }
   
   .user-info {
